@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        line-height: 1.5em;
+        box-sizing: border-box;
+        background-color: #000;
+        width: 500px;
+        margin: auto;
+        align-items: center;
+        margin-top: 100px;
+      }
+      #site-wrap {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 5px;
+        grid-template-rows: 100px 100px 100px 100px;
+        grid-template-areas:
+          " one one one two"
+          "three three four four"
+          ". . five five";
+      }
+      .one {
+        background-color: rgb(227, 93, 9);
+        grid-area: one;
+      }
+      .two {
+        background-color: rgb(255, 213, 0);
+        grid-area: two;
+      }
+      .three {
+        background-color: green;
+        grid-area: three;
+        height: 200px;
+      }
+      .four {
+        background-color: rgba(90, 142, 255, 0.811);
+        grid-area: four;
+        height: 100px;
+      }
+      .five {
+        background-color: rgba(90, 142, 255, 0.811);
+        grid-area: five;
+        height: 90px;
+        margin-bottom: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="site-wrap">
+      <div class="one"></div>
+      <div class="two"></div>
+      <div class="three"></div>
+      <div class="four"></div>
+      <div class="five"></div>
+    </div>
+  </body>
+</html>
